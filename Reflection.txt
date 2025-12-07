@@ -1,0 +1,19 @@
+Reflection
+
+What I Learned
+----------------
+Working on this Budget Tracker helped me understand how different programming concepts connect in a real project. I learned how to apply Object-Oriented Programming by creating a Transaction class and extending it through Income and Expense using inheritance. This made me appreciate how subclasses reduce duplication and keep the structure clean. I also deepened my understanding of modularity by separating the program into functions like add_income(), add_expense(), filter_transactions(), and show_summary().
+
+Using lists to store transactions gave me practical experience with collections and iteration. This became especially important when listing, summarizing, and filtering data. I also strengthened my skills in input validation, ensuring the program continues running even when the user enters incorrect values.
+
+Challenges I Faced
+-------------------
+One of the main challenges I faced was structuring the methods inside the BudgetTracker class correctly so the indentation aligned with Python’s class rules. At first, some functions were outside the class unintentionally, which caused errors. I also struggled with designing the filtering feature because it involved multiple conditions (type, category, and month) and required careful comparison of user input with stored transaction data.
+
+Another difficulty was validating numeric input for amounts. I had to keep the program from crashing when a user typed letters or symbols instead of numbers, which meant using try-except blocks effectively. Finally, organizing the logic for totals and per-category summaries required careful looping and accumulation without mixing income and expense values.
+
+How I Intend to Improve It
+---------------------------
+Given more time, I would upgrade the program in several ways. First, I would add proper date validation to ensure all dates follow the YYYY-MM-DD format. I also want to build an “undo last transaction” feature to correct mistakes easily.
+
+Another improvement would be introducing budget alerts to warn the user when expenses pass a certain threshold. I would also enhance the user experience by improving the formatting of outputs—for example, separating income and expenses visually or adding simple color cues. Finally, I plan to add automated tests to verify that calculations like totals and balances remain accurate. These improvements would make the program more user-friendly, more reliable, and closer to a full budgeting tool.
