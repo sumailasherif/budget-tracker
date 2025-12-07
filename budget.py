@@ -5,17 +5,18 @@ class Transaction:
         self.category = category
         self.description = description
         self.ttype = ttype   # 'income' or 'expense.'
-
+    #String representation of each transaction
     def __str__(self):
         return f"{self.date} | {self.type.upper()} | {self.category} | KSH{self.amount} | {self.description}"
 
 
+    #Automatically assigns transaction type as income
 class Income(Transaction):
     def __init__(self, date, amount, category, description):
         super().__init__(date, amount, category, description, "income")
 
 
-
+    #Automatically assigns transaction type as expense
 class Expense(Transaction):
     def __init__(self, date, amount, category, description):
         super().__init__(date, amount, category, description, "expense")
@@ -52,6 +53,7 @@ def add_expense(self):
             print("No transactions added yet.")
             return
 
+    #Looping through each transaction to calculate totals
   for t in self.transactions:
             print(t)
 
@@ -108,8 +110,8 @@ for t in self.transactions:
     print("\nCategory Totals:")
         for cat, amount in category_totals.items():
             print(f"{cat}: GHC{amount}")
-            
-def get_amount(self):
+            #Ensures the user enters a valid positive number
+    def get_amount(self):
         while True:
             amount = input("Enter amount: ")
             try:
