@@ -8,3 +8,9 @@ class Transaction:
 
     def __str__(self):
         return f"{self.date} | {self.type.upper()} | {self.category} | KSH{self.amount} | {self.description}"
+
+
+class Income(Transaction):
+    def __init__(self, date, amount, category, description):
+        super().__init__(date, amount, category, description, "income")
+        
