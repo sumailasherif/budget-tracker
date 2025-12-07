@@ -89,6 +89,12 @@ def show_summary(self):
         total_expense = 0
         category_totals = {}
 
+for t in self.transactions:
+            if t.type == "income":
+                total_income += t.amount
+            else:
+                total_expense += t.amount
+
     
 
 
