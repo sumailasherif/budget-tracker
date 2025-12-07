@@ -73,3 +73,14 @@ def filter_transactions(self):
             for t in self.transactions:
                 if t.category.lower() == category.lower():
                     print(t)
+
+        elif choice == "3":
+            month = input("Enter month (YYYY-MM): ")
+            for t in self.transactions:
+                if t.date.startswith(month):
+                    print(t)
+
+else:
+            print("Invalid selection. Please choose a valid option.")
+
+
