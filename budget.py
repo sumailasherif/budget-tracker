@@ -95,7 +95,6 @@ for t in self.transactions:
             else:
                 total_expense += t.amount
 
-
             if t.category not in category_totals:
                 category_totals[t.category] = 0
             category_totals[t.category] += t.amount
@@ -106,10 +105,21 @@ for t in self.transactions:
         print(f"Total Expense: GHC{total_expense}")
         print(f"Balance: GHC{balance}")
 
-        print("\nCategory Totals:")
+    print("\nCategory Totals:")
         for cat, amount in category_totals.items():
             print(f"{cat}: GHC{amount}")
-
+            
+def get_amount(self):
+        while True:
+            amount = input("Enter amount: ")
+            try:
+                amount = float(amount)
+                if amount > 0:
+                    return amount
+                else:
+                    print("Please enter a positive number.")
+            except:
+                print("Invalid input. Please enter a valid number.")
 
     
 
