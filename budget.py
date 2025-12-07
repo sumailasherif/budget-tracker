@@ -35,4 +35,14 @@ def add_income(self):
         self.transactions.append(inc)
         print("Income added successfully!")
 
-        
+            def add_expense(self):
+        print("\nAdding expense...")
+        date = input("Date (YYYY-MM-DD): ")
+        amount = self.get_amount()
+        category = input("Category: ")
+        description = input("Description: ")
+
+        exp = Expense(date, amount, category, description)
+        self.transactions.append(exp)
+        print("Expense added successfully!")
+
