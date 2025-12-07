@@ -161,7 +161,7 @@ def main():
             else:
                 print("Invalid choice.")
     except KeyboardInterrupt:
-        print("\nProgram interrupted. Exiting safely.")
+        print("\nYou have exited the Budget Tracker. Goodbye!")
 
 
 if __name__ == "__main__":
