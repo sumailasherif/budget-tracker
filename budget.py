@@ -95,6 +95,22 @@ for t in self.transactions:
             else:
                 total_expense += t.amount
 
+
+            if t.category not in category_totals:
+                category_totals[t.category] = 0
+            category_totals[t.category] += t.amount
+
+        balance = total_income - total_expense
+
+        print(f"Total Income: GHC{total_income}")
+        print(f"Total Expense: GHC{total_expense}")
+        print(f"Balance: GHC{balance}")
+
+        print("\nCategory Totals:")
+        for cat, amount in category_totals.items():
+            print(f"{cat}: GHC{amount}")
+
+
     
 
 
