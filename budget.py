@@ -68,3 +68,8 @@ def filter_transactions(self):
                 if t.type == ttype:
                     print(t)
 
+ elif choice == "2":
+            category = input("Enter category name: ").lower().strip()
+            for t in self.transactions:
+                if t.category.lower() == category.lower():
+                    print(t)
