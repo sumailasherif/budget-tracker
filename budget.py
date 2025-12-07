@@ -83,4 +83,12 @@ def filter_transactions(self):
 else:
             print("Invalid selection. Please choose a valid option.")
 
+def show_summary(self):
+        print("\n--- Budget  Summary ---")
+        total_income = 0
+        total_expense = 0
+        category_totals = {}
+
+    
+
 
