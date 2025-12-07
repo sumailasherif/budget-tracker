@@ -4,4 +4,7 @@ class Transaction:
         self.amount = amount
         self.category = category
         self.description = description
-        self.ttype = ttype   # "income" or "expense"
+        self.ttype = ttype   # 'ncome' or 'expense'
+
+    def __str__(self):
+        return f"{self.date} | {self.type.upper()} | {self.category} | KSH{self.amount} | {self.description}"
