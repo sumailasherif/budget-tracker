@@ -25,24 +25,30 @@ class BudgetTracker:
         self.transactions = []
 
 def add_income(self):
-        print("\Adding income...")
+        print("\n---Record New Income---")
         date = input("Date (YYYY-MM-DD): ")
         amount = self.get_amount()
         category = input("Category: ")
-        description = input("Description: ")
+        description = input("Enter a short Description: ")
 
-        inc = Income(date, amount, category, description)
-        self.transactions.append(inc)
-        print("Income added successfully!")
+        income_entry = Income(date, amount, category, description)
+        self.transactions.append( income_entry)
+        print("Income recorded  successfully!")
 
-            def add_expense(self):
-        print("\nAdding expense...")
+def add_expense(self):
+        print("\n--- Record New Expense ---")
         date = input("Date (YYYY-MM-DD): ")
         amount = self.get_amount()
         category = input("Category: ")
-        description = input("Description: ")
+        description = input("Enter a short Description: ")
 
         exp = Expense(date, amount, category, description)
         self.transactions.append(exp)
-        print("Expense added successfully!")
+        print("Expense recorded successfully!")
+
+ def list_transactions(self):
+        print("\n--- All Transactions ---")
+        if len(self.transactions) == 0:
+            print("No transactions added yet.")
+            return
 
